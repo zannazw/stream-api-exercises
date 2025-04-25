@@ -19,6 +19,8 @@ public class Main {
         System.out.println(studentManager.findNames(students, 1, 18));
         System.out.println(studentManager.averageGrade(students));
         System.out.println(studentManager.findTopStudent(students));
+        System.out.println(studentManager.exists(students, "Maja"));
+        System.out.println(studentManager.adjustedGrade(students, 4.0, 18, -0.7));
 
     }
 }

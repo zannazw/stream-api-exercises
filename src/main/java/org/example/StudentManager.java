@@ -45,11 +45,16 @@ public class StudentManager implements StudentProcessor {
 
     @Override
     public boolean exists(Collection<Student> students, String name) {
-        return false;
+        return students.stream().anyMatch(student -> student.name().equalsIgnoreCase(name));
     }
 
     @Override
     public Collection<Student> adjustedGrade(Collection<Student> students, double minGrade, int minAge, double adjustment) {
-        return null;
+        return students.stream()
+                .filter(student -> student.age() >= minAge)
+                .map(student -> new Student(student.name(), student.age(), student.avgGrade() + adjustment))
+                .filter(student -> student.avgGrade() >= minGrade)
+                .sorted((studentA, studentB) -> Double.compare(studentA.avgGrade(), studentB.avgGrade()))
+                .toList();
     }
 }

@@ -18,6 +18,7 @@ public class Main {
         System.out.println(studentManager.findNames(students, 1));
         System.out.println(studentManager.findNames(students, 1, 18));
         System.out.println(studentManager.averageGrade(students));
+        System.out.println(studentManager.findTopStudent(students));
 
     }
 }

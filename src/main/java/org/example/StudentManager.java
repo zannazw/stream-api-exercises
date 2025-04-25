@@ -40,7 +40,7 @@ public class StudentManager implements StudentProcessor {
 
     @Override
     public Optional<Student> findTopStudent(Collection<Student> students) {
-        return Optional.empty();
+        return students.stream().min((studentA, studentB) -> Double.compare(studentA.avgGrade(), studentB.avgGrade()));
     }
 
     @Override

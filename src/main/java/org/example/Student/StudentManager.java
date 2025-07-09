@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Student;
 
 import java.util.Collection;
 import java.util.Optional;

@@ -1,10 +1,13 @@
 package org.example;
 
+import org.example.Student.Student;
+import org.example.Student.StudentManager;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Main {
+public class MainStudent {
     public static void main(String[] args) {
         Collection<Student> students = new ArrayList<>(List.of(
                 new Student("Vanessa", 19, 2.0),
@@ -21,6 +24,5 @@ public class Main {
         System.out.println(studentManager.findTopStudent(students));
         System.out.println(studentManager.exists(students, "Maja"));
         System.out.println(studentManager.adjustedGrade(students, 4.0, 18, -0.7));
-
     }
 }

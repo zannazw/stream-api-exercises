@@ -48,4 +48,11 @@ public class Steam {
                 .map(word -> word.substring(0, 1)) //[A, C]; [C, o, D]
                 .collect(Collectors.joining()); //"AC"; "CoD"
     }
+
+    /**
+     * @return a new collection of games whose popularity is greater than the given minPopularity (with streams only).
+     */
+    public Collection<Game> findGamesFilteredByMinPopularity(double minPopularity) {
+        return library.stream().filter(game -> game.popularity() >= minPopularity).toList();
+    }
 }

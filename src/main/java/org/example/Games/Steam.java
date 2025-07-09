@@ -34,9 +34,9 @@ public class Steam {
      */
 
     public Collection<Game> findAllGamesWithAcronymizedNames() {
-        Collection<Game> gamesWithAcronymizedNames = library.stream()
-                .map(game -> new Game(acronymizeName(game.name()), game.popularity())).collect(Collectors.toList());
-        return gamesWithAcronymizedNames;
+        return library.stream()
+                .map(game -> new Game(acronymizeName(game.name()), game.popularity()))
+                .collect(Collectors.toList());
     }
 
     /*

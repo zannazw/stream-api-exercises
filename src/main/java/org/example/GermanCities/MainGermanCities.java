@@ -1,8 +1,4 @@
-package org.example;
-
-import org.example.GermanCities.Address;
-import org.example.GermanCities.GermanCities;
-import org.example.GermanCities.Person;
+package org.example.GermanCities;
 
 import java.util.stream.Stream;
 

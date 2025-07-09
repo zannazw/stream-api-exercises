@@ -1,7 +1,4 @@
-package org.example;
-
-import org.example.Student.Student;
-import org.example.Student.StudentManager;
+package org.example.Student;
 
 import java.util.ArrayList;
 import java.util.Collection;
